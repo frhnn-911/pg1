@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alien Surprise</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+  <audio id="bgMusic" src="sounds/bg.mp3" preload="auto" loop></audio>
+
+  <audio id="ufoSound" src="sounds/ufo.mp3" preload="auto"></audio>
+
+
+  <!-- ✅ Background Blur Wrapper -->
+  <div class="background-wrapper">
+    <img src="images/your-bg.jpg" class="blurred-bg" />
+  </div>
+
+  <div class="background">
+    <!-- UFO WebM -->
+    <video id="ufo" class="ufo hidden" src="animations/ufo.webm" autoplay muted loop></video>
+    <video id="alien" src="animations/alien.webm" autoplay muted loop></video>
+
+    <!-- UFO Bubble -->
+    <div class="bubble-container hidden">
+      <img src="images/a.jpg" class="bubble-img" />
+      <div class="bubble-text" id="ufoText"></div>
+    </div>
+
+    <!-- Alien Bubble (Right) -->
+    <div class="alien-bubble hidden" id="alienBubble">
+      <img src="images/b.jpg" class="bubble-img" />
+      <div class="alien-text" id="alienText"></div>
+    </div>
+
+    <div class="right-bubble">
+      <span class="alien-text">Happy Birthday!</span>
+    </div>
+
+    <div id="emojiContainer"></div>
+
+    <!-- Alien Bubble (Left) -->
+    <div class="alien-bubble-left hidden" id="alienBubbleLeft">
+      <img src="images/c.jpg" class="bubble-img" />
+      <div class="alien-text-left" id="alienTextLeft"></div>
+    </div>
+
+    <!-- Rocket Animation -->
+    <video id="rocket" class="rocket hidden" src="animations/rocket.webm" autoplay muted loop></video>
+
+    <!-- Countdown Button -->
+    <button id="countdownButton" class="countdown-button hidden">
+      Start Countdown
+    </button>
+
+    <!-- Countdown Display -->
+    <div id="countdownDisplay" class="countdown-display hidden">
+      <p id="countdownText">5</p>
+    </div>
+
+    <!-- Next Button -->
+    <button id="nextButton" class="next-button hidden">
+      Next Surprise
+    </button>
+
+    <!-- Happy Birthday Message -->
+    <div id="happyBirthdayMessage" class="hidden" style="position: fixed; bottom: 33%; left: 50%; transform: translateX(-50%); z-index: 9999;">
+      <h2>Happy Birthday!</h2>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
