@@ -40,15 +40,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // UFO dialogue type effect
   const ufoDialogues = [
-    "hii"
+    "Hawa mein mat dekho, screen pe tap karo..!!"
   ];
 
   const typeUFOAndEnableClick = () => {
     let i = 0;
     const next = () => {
       if (i < ufoDialogues.length) {
-        typeWriter(ufoDialogues[i++], bubbleText, 50, () => setTimeout(next, 0));
-      } else setTimeout(enableClick, 100);
+        typeWriter(ufoDialogues[i++], bubbleText, 50, () => setTimeout(next, 50));
+      } else setTimeout(enableClick, 50);
     };
     next();
   };
@@ -117,24 +117,32 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const typeAlienDialogue = cb => {
     const lines = [
-      "hii"
+      "Yeh kaun tapak gaya bhai... itna chamak ke?",
+"Oye! Kisne meri neend disturb kari yeh shine leke?",
+"Mujhe lagta hai sweet sapna chal raha...,",
+"Aree ruk! Yeh dream nahi... filterless glow-up hai!",
+"Haan yaad aaya... boss ne bola tha 'chamkile guest' aayenge!",
+"Boss ne bola tha – ‘jab wo aaye, toh taali bajana!’",
+"Oho cutiee! Tum toh expectations ke bhi upar nikli!"
     ];
     let i = 0;
     (function next() {
       if (i < lines.length) {
-        typeWriter(lines[i++], alienText, 50, () => setTimeout(next, 0));
+        typeWriter(lines[i++], alienText, 50, () => setTimeout(next, 1000));
       } else cb && cb();
     })();
   };
 
   const typeLeftDialogue = () => {
     const lines = [
-      "hii"
+      "Oye hoye... rocket ne tujhe dekha aur blushing mode on kar diya!",
+"Boss ne bola tha: ‘isko dekhte hi rocket full swag mein udna chahiye!’",
+"Chalo ab tap karo screen... rocket bhi wait mein hairfall kar raha hai!"
     ];
     let i = 0;
     (function next() {
       if (i < lines.length) {
-        typeWriter(lines[i++], alienTextLeft, 50, () => setTimeout(next, 0));
+        typeWriter(lines[i++], alienTextLeft, 50, () => setTimeout(next, 1000));
       } else setTimeout(() => countdownButton.style.pointerEvents = 'auto', 50);
     })();
   };
